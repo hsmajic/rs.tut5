@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.beans.property.SimpleStringProperty;
+import java.lang.String;
 
 public class Korisnik {
     private SimpleStringProperty ime;
@@ -8,13 +9,15 @@ public class Korisnik {
     private SimpleStringProperty email;
     private SimpleStringProperty korisnickoIme;
     private SimpleStringProperty lozinka;
+public Korisnik(){
 
-    public Korisnik{
-        ime = new SimpleStringProperty();
-        prezime = new SimpleStringProperty();
-        email = new SimpleStringProperty();
-        korisnickoIme = new SimpleStringProperty();
-        lozinka = new SimpleStringProperty();
+}
+    public Korisnik(String ime, String prezime, String email, String korisnickoIme, String lozinka){
+        this.ime = new SimpleStringProperty(ime);
+        this.prezime = new SimpleStringProperty(prezime);
+        this.email = new SimpleStringProperty(email);
+        this.korisnickoIme = new SimpleStringProperty(korisnickoIme);
+        this.lozinka = new SimpleStringProperty(lozinka);
     }
 
     public String getIme() {
